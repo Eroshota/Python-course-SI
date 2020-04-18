@@ -10,10 +10,9 @@ def req():
     return bb.json(),c.json(),bs.json(),bc.json()
 
 def walup(wallet, buy, sell):
-    #wallet[1] = wallet[1] + 0.01
-    wallet[0] = wallet[0] - buy*0.01
-    wallet[1] = wallet[1] - 0.01
-    wallet[0] = wallet[0] + sell*0.01
+    wallet[0] = wallet[0] - buy*0.1
+    wallet[1] = wallet[1] - 0.1
+    wallet[0] = wallet[0] + sell*0.1
     return wallet
 
 def arbitration(wallet):
@@ -38,9 +37,8 @@ def arbitration(wallet):
     highesto=max(sell,key=sell.get)
 
     if lowest<highest:
-        print(f"On the {lowesto} You can buy 0,01 BTC for USD at the exchange rate of {lowest} and  sell on the {highesto}, gaining {(highest-lowest)*0.1} USD ")
-        print(
-            f"New Wallet: {walup(wallet, lowest, highest)}")
+        print(f"From {lowesto} you can buy 0,1 BTC for USD at the exchange rate {lowest} and  sell on {highesto} at the exchange rate {highest}, gain: {(highest-lowest)*0.1} USD ")
+        print(f"New Wallet: {walup(wallet, lowest, highest)}")
     else:
         print("not worth")
 wallet = [100, 2.0]
