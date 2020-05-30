@@ -1,0 +1,9 @@
+Nale¿y utworzyæ dokument json o dowolnej nazwie (program o ni¹ zapyta)
+z danymi przedstawionymi w nastêpuj¹cy sposób
+{
+  "btc": 46.045,
+  "xrp": 199.26,
+  "ltc": 1.59,
+  "eth": 1.84,
+  "bch": 0.27
+}
